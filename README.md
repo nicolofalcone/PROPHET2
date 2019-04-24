@@ -1,8 +1,10 @@
 # PROPHET2Plot
-## PROPHET2UncertaintyPlot.py
-PROPHET2UncertaintyPlot.py is a Python script to plot RELAP5-3D results obtained by uncertainty analysis performed with RAVEN on the PROPHET2 test facility located at Politecnico di Torino.
+This repository contains the files needed to plot RELAP5-3D results obtained by uncertainty analysis performed with RAVEN on the PROPHET2 test facility located at Politecnico di Torino.
 
-It has been mainly conceived to plot the numerical results obtained performing uncertainty analysis using the software RAVEN toghether with the thermal hydraulic code RELAP5-3D, both developed at INL.
+It has been conceived to plot the numerical results obtained performing uncertainty analysis using the software RAVEN toghether with the thermal hydraulic code RELAP5-3D, both developed at INL.
+
+## PROPHET2UncertaintyPlot.py
+PROPHET2UncertaintyPlot.py is a Python script that allows to plot the resuls from the uncertainty analysis.
 
 It consist of a class and different functions. The functions are:
 
