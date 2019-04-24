@@ -1,9 +1,15 @@
-# PROPHET2Plot
-This repository contains the files needed to plot RELAP5-3D results obtained by uncertainty analysis performed with RAVEN on the PROPHET2 test facility located at Politecnico di Torino.
+# PROPHET2
+This repository contains all the file needed to perform the uncertainty sanalysis using the software RAVEN toghether with the thermal hydraulic code RELAP5-3D on the PROPHET2 test facility located at Politecnico di Torino.
 
-It has been conceived to plot the numerical results obtained performing uncertainty analysis using the software RAVEN toghether with the thermal hydraulic code RELAP5-3D, both developed at INL.
+### PROPHET2_uncertaintyMC.xml
+PROPHET2_uncertaintyMC.xml is the RAVEN input file needed to run the uncertainty analysis.
 
-## PROPHET2UncertaintyPlot.py
+Its main features are the distribution declared for each parameter, the sampler adopted (MonteCarlo), the number of simulation performed (120) and the statistics performed in the end (Pearson matrix and 5%/95% percentile).
+
+## PROPHET2Plot
+This repository contains the files needed to plot RELAP5-3D results obtained from the uncertainty analysis.
+
+### PROPHET2UncertaintyPlot.py
 PROPHET2UncertaintyPlot.py is a Python script that allows to plot the resuls from the uncertainty analysis.
 
 It consist of a class and different functions. The functions are:
@@ -16,7 +22,7 @@ It consist of a class and different functions. The functions are:
   
 - Cobweb(): This function normalized the parameters perturbed durign the uncertainty analysis in the range [0,1] for every numerical simulation. Then it plots the normalized values of all the parameters used in every simulation in a plot in which the x-coordinate  is the n-parameters and the y-axis is the normalized value of the parameters. The values related to the same simulation are plotted  with the same color.
 
-## UncertaintyAnalysis_PROPHET2_test18.xlsx
+### UncertaintyAnalysis_PROPHET2_test18.xlsx
 UncertaintyAnalysis_PROPHET2_test18.xlsx is an Excel table thet contains the list of the parameters perturbed for the uncertainty analysis. For each parameters the following information are reported:
 
 - the name of the parameter
@@ -33,5 +39,5 @@ UncertaintyAnalysis_PROPHET2_test18.xlsx is an Excel table thet contains the lis
 
 - reference, if any.
 
-## UncertaintyRange.xlsx
+### UncertaintyRange.xlsx
 UncertaintyRange.xlsx is an Excel table that contains the lower and upper bounds of the range of variation for all the selected parameters for the uncertainty analysis. The values are taken from the table reported in UncertaintyAnalysis_PROPHET2_test18.xlsx. The data stored in this file are used in the normalization of the input values used in the numerical simulations.
