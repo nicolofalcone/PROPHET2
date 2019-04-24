@@ -16,9 +16,6 @@ It consist of a class and different functions. The functions are:
   
 - Cobweb(): This function normalized the parameters perturbed durign the uncertainty analysis in the range [0,1] for every numerical simulation. Then it plots the normalized values of all the parameters used in every simulation in a plot in which the x-coordinate  is the n-parameters and the y-axis is the normalized value of the parameters. The values related to the same simulation are plotted  with the same color.
 
-## UncertaintyRange.xlsx
-UncertaintyRange.xlsx is an Excel table that contains the lower and upper bounds of the range of variation for all the selected parameters for the uncertainty analysis. The data stored in this file are used in the normalization of the input values used in the numerical simulations.
-
 ## UncertaintyAnalysis_PROPHET2_test18.xlsx
 UncertaintyAnalysis_PROPHET2_test18.xlsx is an Excel table thet contains the list of the parameters perturbed for the uncertainty analysis. For each parameters the following information are reported:
 
@@ -35,3 +32,6 @@ UncertaintyAnalysis_PROPHET2_test18.xlsx is an Excel table thet contains the lis
 - the card and the words modified in the RELAP5-3D input, written in the form "card:word"
 
 - reference, if any.
+
+## UncertaintyRange.xlsx
+UncertaintyRange.xlsx is an Excel table that contains the lower and upper bounds of the range of variation for all the selected parameters for the uncertainty analysis. The values are taken from the table reported in UncertaintyAnalysis_PROPHET2_test18.xlsx. The data stored in this file are used in the normalization of the input values used in the numerical simulations.
