@@ -16,3 +16,20 @@ It consist of a class and different functions. The functions are:
 
 ## UncertaintyRange.xlsx
 UncertaintyRange.xlsx is an Excel table that contains the lower and upper bounds of the range of variation for all the selected parameters for the uncertainty analysis. The data stored in this file are used in the normalization of the input values used in the numerical simulations.
+
+## UncertaintyAnalysis_PROPHET2_test18.xlsx
+UncertaintyAnalysis_PROPHET2_test18.xlsx is an Excel table thet contains the list of the parameters perturbed for the uncertainty analysis. For each parameters the following information are reported:
+
+- the name of the parameter
+
+- the type of distribution adopted (normal, uniform, triangular, etc.)
+
+- the reference value i.e. the value used as input in the reference case
+
+- the range of variation with respect to the reference value (-%/+% of the reference value)
+
+- the upper and lower bound of the range of variation
+
+- the card and the words modified in the RELAP5-3D input, written in the form "card:word"
+
+- reference, if any.
