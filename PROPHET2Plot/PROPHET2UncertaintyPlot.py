@@ -22,11 +22,11 @@ class UncertAnalysis:
 	def __init__(self, mainDir):
 
 		self.filenames = sorted(glob.glob(".\\UncertaintyAnalysisMC\\*\\*.csv"))
+		self.inputs = sorted(glob.glob(".\\UncertaintyAnalysisMC\\*\\*.i"))
 		self.varlist = sorted(pd.read_csv(self.filenames[0]).keys())
 		self.varlist.remove('time')
 		print(self.varlist)
-		print('\n')
-		print("%i files have been read." % len(self.filenames))
+		
 
 		simul = []
 
@@ -35,7 +35,17 @@ class UncertAnalysis:
 			simul.append(fold)
 
 		simul = list(map(int,simul))
-		ntest=max(simul)
+
+		ntest = 0
+
+		for inp in self.inputs:
+			fold = inp.split('\\')[2]
+			if int(fold) > ntest:
+				ntest = int(fold)
+
+		print('\n')
+		print("%i simulations launched.\n" % ntest)
+		print("%i runs succeded.\n" % len(self.filenames))
 
 		test = np.arange(1,(ntest+1))
 		list(test)
