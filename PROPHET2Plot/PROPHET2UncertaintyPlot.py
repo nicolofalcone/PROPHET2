@@ -55,12 +55,17 @@ class UncertAnalysis:
 
 		failed_run = test[has_failed]
 
-		print('Runs %s failed.' % failed_run)
-		print('\n')
+		if len(failed_run) > 0:
+			if len(failed_run) == 1:
+				print('%i run failed.\n' % len(failed_run))
+			elif len(failed_run) > 1:
+				print('%i runs failed.\n' % len(failed_run))
+
+		print("Failed runs: %s.\n" % failed_run)
 
 		perc_file = ".\\PROPHET2_percentile_0.csv"
 		if not os.path.exists(perc_file):
-			print("PROPHET2_percentile_0.csv does not exist.")
+			print("PROPHET2_percentile_0.csv does not exist.\n")
 		else:
 			self.percentile = pd.read_csv(perc_file)
 
@@ -68,10 +73,10 @@ class UncertAnalysis:
 			self.ExpTest = pd.read_excel(".\\Prova18 22_02_2019\\prova.xlsx")
 			fname = ".\\Prova18 22_02_2019\\prova.hdf5"
 			self.ExpTest.to_hdf(fname,'table')
-			print('Experimental data loaded.')
+			print('Experimental data loaded.\n')
 		else:
 			self.ExpTest = pd.read_hdf(".\\Prova18 22_02_2019\\prova.hdf5","table")
-			print('Experimental data loaded.')
+			print('Experimental data loaded.\n')
 
 
 	def _units(self,variable):
