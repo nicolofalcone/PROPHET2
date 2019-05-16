@@ -208,7 +208,7 @@ class UncertAnalysis:
 			expvar = self.ExpTest.TW_C
 		elif variable == "cntrlvar_216":
 			title = "TW-D"
-			expvar = self.ExpTest.TW_D
+			expvar = self.ExpTest.TW_D1
 		elif variable == "cntrlvar_217":
 			title = "TW-E"
 			expvar = self.ExpTest.TW_E
